@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+  </head>
+  <body id="hello" style="
+  background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red) no-repeat center center fixed;">
+<br><br><br><br><br>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+
+
+
+
+    <div aria-label="Orange and tan hamster running in a metal wheel" role="img" class="wheel-and-hamster">
+      <div class="wheel"></div>
+      <div class="hamster">
+        <div class="hamster__body">
+          <div class="hamster__head">
+            <div class="hamster__ear"></div>
+            <div class="hamster__eye"></div>
+            <div class="hamster__nose"></div>
+          </div>
+          <div class="hamster__limb hamster__limb--fr"></div>
+          <div class="hamster__limb hamster__limb--fl"></div>
+          <div class="hamster__limb hamster__limb--br"></div>
+          <div class="hamster__limb hamster__limb--bl"></div>
+          <div class="hamster__tail"></div>
+        </div>
+      </div>
+      <div class="spoke"></div>
+    </div>
+
+    <script>
+      var a=0,b=0;
+      var arry=["red", "orange", "yellow", "green", "blue" ,"indigo","purple","red", "orange", "yellow", "green", "blue" , "indigo", "pırple"];
+      
+      function myLoop() {         //  create a loop function
+        setTimeout(function() {   //  call a 3s setTimeout when the loop is called
+            document.getElementById("hello").style.background = "linear-gradient("+a+"deg,"+arry[b]+"," +arry[b+1]+","+ arry[b+2]+","+ arry[b+3]+","+arry[b+4]+","+arry[b+5]+","+arry[b+6]+","+arry[b]+","+arry[b+1]+","+ arry[b+2]+","+ arry[b+3]+","+arry[b+4]+","+arry[b+5]+","+arry[b+6]+"," +arry[b]+") no-repeat center center fixed";
+           a++;
+            b++;
+            if (b==7) {
+              b=0;
+            }
+            
+      
+          if (a==360) {
+            a=0;
+          }
+      
+          
+      
+      
+           myLoop(); //  ..  setTimeout()
+        }, 110)
+      }
+      
+      myLoop();
+      
+      </script>
+
+
+
+
+
+
+
+
+
+  </body>
+
+</html>
